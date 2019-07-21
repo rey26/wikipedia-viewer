@@ -6,9 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wikipedia Viewer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Wikipedia API search engine</h1>
+            <h4>freeCodeCamp Project</h4>
+        </header>
+
+        <section class="heading">
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" >
+                <img class="main" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPsZDC_GIrcqhq-gEQXZOqQyKclnrp9Y1vPUDvrHZSpj0PCCbx3Q"/>
+            </a>
+        </section>
+
+        <div class="row">
+            <div class="col-md-10 col-sm-12">
+                <input id="searchTerm">
+            </div>
+            <div class="col-md-2 col-sm-12">
+                <button id="search" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </div>
+        
+        <ul id="output">
+        </ul>
+        
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./main.js"></script>
 </body>
