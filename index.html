@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wikipedia Viewer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
 </head>
@@ -22,13 +23,9 @@
             </a>
         </section>
 
-        <div class="row">
-            <div class="col-md-10 col-sm-12">
-                <input id="searchTerm">
-            </div>
-            <div class="col-md-2 col-sm-12">
-                <button id="search" class="btn btn-primary btn-lg">Submit</button>
-            </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <a onclick="search();"><i class="fas fa-search" aria-hidden="true"></i></a></div>
         </div>
         
         <ul id="output">

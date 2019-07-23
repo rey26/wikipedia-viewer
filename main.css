@@ -5,11 +5,12 @@ body{
   background-attachment:fixed;
 }
 
-input{
+.main input{
   font-size:2em;
   height:1.7em;
   border-radius:10px;
   border-color: black;
+  max-width: 100%;
 }
 
 a{
@@ -46,6 +47,42 @@ a:hover{
   max-width: 100%;
 }
 
-.main{
-  border-radius:20px;
+.search{
+  min-width: 182px;
+  max-width: 550px;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  color: #000000;
+  padding: 5px;
+}
+
+.search input {
+  height: 100%;
+  width: 95%;
+  display: inline-block;
+  border: none;
+  color: #000000;
+  outline: none;
+  font-size: 1.1em;
+  box-shadow: none!important;
+}
+
+.search a {
+  display: inline-block;
+  width: 5%;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .search a{
+    width: 10%;
+  }
+  .search input{
+    width: 90%;
+  }
 }
