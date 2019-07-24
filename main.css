@@ -15,20 +15,15 @@ body{
 
 a{
   text-decoration:none;
-  color: red;
 }
 
 a:hover{
   text-decoration:none;
-  color:blue;
+  font-weight: bold;
 }
 
 #output{
   font-size:1.5em;
-  font-style:bold;
-  background-color:grey;
-  opacity:0.97;
-  border-radius:10px;
 }
 
 .heading{

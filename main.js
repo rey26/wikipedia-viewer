@@ -4,18 +4,25 @@
 
 $(document).ready(function(){
 
-    $('#searchTerm').keypress(function(e){
+    $(".search > a").click(function(){
+        search();
+    });
+
+    $('.search > input').keypress(function(e){
         if(e.which==13){
-            $("#search").click();
+            $(".search > a").click();
         }     
     });
-    search();
+
 });
 
 // when hiting Submit button, function is performed
 function search(){
     //gets input
-    var searchTerm=$('#searchTerm').val();
+    var searchTerm = $('.search > input').val();
+    if(searchTerm.length < 1){
+        return;
+    }
     searchTerm=searchTerm.split(" ");
     
     
@@ -24,20 +31,17 @@ function search(){
     $.ajax({
     type:"GET",
         url:url,
-        async:false,
         dataType: "json",
         success: function(data){
-        //heading console.log(data[1][0]);
-        //describtion console.log(data[2][0]);
-        //link console.log(data[3][0]);
-        $('#output').html('');
-        for(var i=0; i<data[1].length; i++){
-            $('#output').prepend("<li><a href="+data[3][i] +">"+ data[1][i] +"</a><p>"+data[2][i]+"</p></li>");
+
+            $('#output').html('');
+            for(var i=0; i<data[1].length; i++){
+                $('#output').append("<li><a href="+data[3][i] +">"+ data[1][i] +"</a><p>"+data[2][i]+"</p></li>");
             }
-            $('#searchTerm').val("");
+            $('.search > input').val("");
         },
         error:function(errorMessage){
-        alert("Error");
+            alert("Error");
         }
     });
     
